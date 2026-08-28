@@ -9,8 +9,8 @@
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
     "db:migrate": "prisma migrate deploy",
-    "db:seed:content": "node ./prisma/seedArtistSong.js",
-    "db:seed:admins": "node ./prisma/seedAdmin.js",
+    "db:seed:content": "node ./prisma/artistSongDataSeed.js",
+    "db:seed:admins": "node ./prisma/adminDataSeed.js",
     "db:seed": "npm run db:seed:content && npm run db:seed:admins"
   },
   "keywords": [],
