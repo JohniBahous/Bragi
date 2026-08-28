@@ -1,13 +1,27 @@
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
+import bcrypt from "bcrypt"
+import data from "../seed-data/adminData.json" with { type: 'json' }
+
 const prisma = new PrismaClient();
-const data = require('../data/adminData.json');
 
 async function main() {
 
+  await prisma.$executeRaw `TRUNCATE TABLE admin RESTART IDENTITY CASCADE`;
+
   for (const admin of data) {
+
+    const plainPassword = process.env[admin.envPassword];
+
+    if (!plainPassword) {
+      throw new Error(`Missing env variable: ${admin.envPassword}`);
+    }
+
+    const hashedPassword = await bcrypt.hash(plainPassword, 12)
+
     await prisma.admin.create({
       data: {
-        ...admin,
+        name: admin.name,
+        hashedPassword,
       }
     });
   }

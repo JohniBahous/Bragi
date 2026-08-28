@@ -1,8 +1,11 @@
-import React from "react";
+import { lazy } from "react";
 import { Route } from "wouter";
-import MainView from "./components/main-view/MainView";
-import { ProtectedRoute } from "./components/admin-panel/ProtectedRoute.jsx";
-import { AdminLogIn, AdminMain } from "./components/admin-panel/index.js";
+import { ProtectedRoute } from "./components/AdminPanel/ProtectedRoute.jsx";
+import Studio from "./Pages/Studio.jsx";
+
+const AdminLogIn = lazy(() => import("./Pages/AdminLogIn.jsx"));
+const AdminMain = lazy(() => import("./Pages/AdminMain.jsx"));
+const E404Page = lazy(() => import("./Pages/E404Page.jsx"));
 
 const App = () => {
   return (
@@ -13,7 +16,8 @@ const App = () => {
           <AdminMain></AdminMain>
         </ProtectedRoute>
       </Route>
-      <Route path="/" component={MainView} />
+      <Route path="/" component={Studio} />
+      <Route path="/404" component={E404Page} />
     </div>
   );
 };

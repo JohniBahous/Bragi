@@ -1,0 +1,173 @@
+[
+  {
+    "fullName": "AMY MARSH",
+    "stageName": "AMY MARSH",
+    "bioFull": "The pop princess from down under, what started off as just another cover uploaded online turned into force in the Aussie Pop scene thanks to heavenly vocals and immaculate stage presenance. Amy Marsh is a name that soon everyone around the globe will come to know.",
+    "s3Key": "AM_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "RIPPED JEANS",
+        "genre": "POP",
+        "yor": 2025,
+        "bpm": 170,
+        "s3Key": "Acoustic_Guitar-pop.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  },
+  {
+    "fullName": "KOGA AYA",
+    "stageName": "KOGA",
+    "bioFull": "One wouldn't look to Japan for Alt Rock but KOGA is well on her way to change that perception. Armed with the influnces of grand daddies of Alt Rock and her Japanese heritage, KOGA is turning heads and perking up ears everywhere she goes.",
+    "s3Key": "KA_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "GREEN",
+        "genre": "ALT ROCK",
+        "yor": 2025,
+        "bpm": 158,
+        "s3Key": "Be_A_Good_Punk-indierock.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  },
+  {
+    "fullName": "PAUL BEE",
+    "stageName": "PAULIE",
+    "bioFull": "A self proclaimed time traveler not much is known about PAULIE but his unbound creativatity and unusual performances make his presence undenieble, beat by beat and vocals by vocal PAULIE is slowly but surely worming his way into everyone's ear and making his mark.",
+    "s3Key": "PB_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "CYCLES",
+        "genre": "R&B",
+        "yor": 2025,
+        "bpm": 173,
+        "s3Key": "You_Know_Why-pop.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  },
+  {
+    "fullName": "MARCO ALEJANDRO",
+    "stageName": "MARCO ALEJANDRO",
+    "bioFull": "MARCO ALEJANDRO has made it his mission to bring the sounds of his birthland of Puerto Rico into everyone's focus. Armed crunchy drums and chill acoustics intruments, MARCO ALEJANDRO makes sure to add his element X in order to stand out and stand above the rest.",
+    "s3Key": "MA_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "FICCION",
+        "genre": "REGGAETON",
+        "yor": 2023,
+        "bpm": 100,
+        "s3Key": "Baila_Conmigo-reggaeton.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  },
+  {
+    "fullName": "CHUCK ROGERS & TRAVIS JOHNSON",
+    "stageName": "C.R.A.Z.Y.",
+    "bioFull": "Hailing from the underground house scene, this Manchester aim to revitalize the rawness and rebelliousness of the genre's spirit that defined their childhood. The duo stands as the Charon of the house genre waiting to take us and our ears down the River Styx of beatdrops and drum machines.",
+    "s3Key": "CRAZY_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "ALL NIGHT LONG",
+        "genre": "HOUSE",
+        "yor": 2024,
+        "bpm": 115,
+        "s3Key": "Tropical-house.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  },
+  {
+    "fullName": "ALFIE SIMMIONS",
+    "stageName": "ALFIE SIMMIONS",
+    "bioFull": "ALFIE SIMMIONS is considered by many to be England's next ambassador in the DnB scene. But ALFIE's blend of DnB isn't that of the yesteryears, blending genres and pushing boundaries, ALFIE SIMMIONS is taking DnB and us on a thumping journey that is sure to be seared into everyone's mind.",
+    "s3Key": "AS_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "OVERDRIVE",
+        "genre": "DNB",
+        "yor": 2023,
+        "bpm": 87,
+        "s3Key": "Jungle-dnb.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  },
+  {
+    "fullName": "SM GUEYE",
+    "stageName": "106",
+    "bioFull": "106 stands as a defining figure in the rapidly evolving chillpop scene, 106 has quickly earned a reputation for his hypnotic beats that mesmerizes the listners with ethereal vibes, intricate grooves, and cloudy synths.",
+    "s3Key": "SMG_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "DE NIRO",
+        "genre": "LUCID POP",
+        "yor": 2022,
+        "bpm": 120,
+        "s3Key": "Stardust-lucidpop.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  },
+  {
+    "fullName": "LUDIWIG FRIEDL",
+    "stageName": "LUDI",
+    "bioFull": "LUDI, celebrated by many as the next big thing in the German rap scene. With personally crafted raw and real signature sound, LUDI looks to take on the industries biggest stages one club and festival at a time.",
+    "s3Key": "LF_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "FRESH",
+        "genre": "HIP-HOP",
+        "yor": 2022,
+        "bpm": 128,
+        "s3Key": "Higher-chillhop.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  },
+  {
+    "fullName": "DREW BENSON",
+    "stageName": "DREW BENSON",
+    "bioFull": "With a 15 year career as a lawyer behind him, DREW BENSON isn't what you call your average artist. A music style likened to a time capsule sonically, DREW BENSON looks to bring the experiences and moments of old to the new generations to enjoy.",
+    "s3Key": "DB_Portrait.svg",
+    "isActive": true,
+    "isArchived": false,
+    "song": 
+      {
+        "title": "ABOUT RIGHT",
+        "genre": "EDM",
+        "yor": 2024,
+        "bpm": 148,
+        "s3Key": "Spacesynth-edm.mp3",
+        "isActive": true,
+        "isArchived": false
+      }
+    
+  }
+]

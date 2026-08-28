@@ -1,5 +1,5 @@
 export async function uploadFileToS3(file, folderName) {
-  const { url } = await fetch(`http://localhost:8080/presignedurl`, {
+  const { url } = await fetch(`/upload/presigned`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

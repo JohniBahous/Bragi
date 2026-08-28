@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 50vh;
-  background-color: #c2fe0c;
+  min-height: 55vh;
+  background-color: #ff9f1c;
   border-top: 2px solid #1a1a1a;
   flex-grow: 3;
 }
@@ -14,41 +14,66 @@
   align-items: center;
   flex-direction: column;
   border: 2px solid #1a1a1a;
-  border-radius: 5%;
-  background-color: #c2fe0c;
+  clip-path: polygon(
+    5% 0,
+    95% 0,
+    100% 5%,
+    100% 95%,
+    95% 100%,
+    5% 100%,
+    0 95%,
+    0 5%
+  );
+  background-color: #ff9f1c;
   flex: 1;
 }
 
 .pillars-icon {
-  min-width: 15vw;
+  min-height: 30vw;
+  animation: scale 0.5s cubic-bezier(0, 0, 0.7, 1) both;
+}
+
+.pillars-icon-pad-h {
+  padding: 0 1vw 0 1vw;
+}
+
+.pillars-icon-pad-v {
+  padding: 1vw 0 1vw 0;
 }
 
 .pillars-artist-bio {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: large;
+  font-size: clamp(1rem, 2.25vh, 2rem);
+  padding: 15px;
+  background-color: #1a1a1a;
+  color: #ff9f1c95;
+  border: 2px solid #ff9f1c;
+  letter-spacing: 0.02em;
 }
 
 .pillars-artist-portrait {
-  min-width: 20vw;
+  min-width: 15vw;
 }
 
 .pillars-artist-name,
 .pillars-song-name {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: clamp(1rem, 5vh, 4rem);
+  font-size: clamp(1rem, 4vh, 4rem);
   font-weight: bolder;
+  padding: 15px 0 15px 0;
+  letter-spacing: 0.15em;
 }
 
-.pillars-test {
+.pillars-base {
   flex: 1;
 }
 .pillars-content {
   display: grid;
   flex: 1;
-  min-height: 60vh;
+  min-height: 55vh;
   grid-template-columns: repeat(6, 1fr);
   background-color: #1a1a1a;
 }
@@ -59,25 +84,25 @@
   align-items: center;
   grid-template-columns: repeat(6, 1fr);
   background-color: #1a1a1a;
-  color: #c2fe0c;
+  color: #ff9f1c;
   height: 10vh;
   font-weight: bold;
   font-size: clamp(1rem, 2vw, 2rem);
+  font-family: "Miratrix";
 }
 
 .label {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 2vw;
 }
 
 .label-start {
-  background-color: #c2fe0c;
+  background-color: #ff9f1c;
   color: #1a1a1a;
 }
 
-.pillars-volume-slider {
+/* .pillars-volume-slider {
   display: grid;
   position: relative;
 }
@@ -93,7 +118,7 @@
   text-orientation: upright;
   font-size: clamp(1rem, 3vw, 4rem);
   background-color: #1a1a1a;
-  color: #c2fe0c;
+  color: #ff9f1c;
   z-index: 0;
   position: relative;
   display: flex;
@@ -105,17 +130,120 @@
   grid-column: 1;
   grid-row: 1;
   position: absolute;
-  top: 47%;
-  left: 23%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50%);
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: auto;
-}
+} */
 
 .label-icon {
   width: 50px;
-  filter: var(--filter-green, transparent);
+  filter: var(--filter-amber, transparent);
+}
+
+.pillars-playback-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/media//backgrounds/transmissionBg.svg");
+  background-size: 35%;
+  font-family: "Miratrix";
+}
+
+.pillars-playback {
+  width: 45vw;
+}
+
+/* .audiotime-container:hover .audiotime-default {
+  display: none;
+}
+
+.audiotime-container:hover .audiotime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2fe0c;
+  color: #1a1a1a;
+}
+
+.audiotime {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.audiotime-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.pillars-playback-transmission-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #1b1b1b;
+  font-family: "Miratrix";
+}
+
+.pillars-playback-transmission-arrow {
+  width: 30vw;
+  filter: var(--filter-amber, transparent);
+}
+
+.reverse {
+  transform: rotate(180deg);
+}
+
+.pillars-playback-transmission-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff9f1c;
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  width: 40vw;
+}
+.label-active {
+  text-shadow:
+    0 0 10px #ff9f1c,
+    0 0 20px #ff9f1c;
+  animation: breathing 3s ease-out infinite normal;
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }

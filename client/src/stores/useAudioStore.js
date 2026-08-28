@@ -8,49 +8,53 @@ const useAudioStore = create(
   persist(
     (set) => ({
       
-      howlInstance: null, 
-      volume: 0.5,
+      volume: 0.7,
+      audioDuration: 0,
+      audioTime: 0,
       setVolume: (value) => set({ volume: value }),
-      setHowlInstance: (howl) => set({ howlInstance: howl }),
-
-      currentSnippetId: null,
-      currentSongId: null,
-      currentArtistId: null,
-      tempSnippetId: null,
-      tempArtistId: null,
-      setCurrentSnippetId: (id) => set({ currentSnippetId: id }),
-      setCurrentSongId: (id) => set({currentSongId: id }),
-      setCurrentArtistId: (id) => set({currentArtistId: id }),
-      setTempSnippetId: (id) => set({ tempSnippetId: id }),
-      setTempArtistId: (id) => set({ tempArtistId: id }),
+      setAudioDuration: (value) => set({ audioDuration: value }),
+      setAudioTime: (value) => set({ audioTime: value }),
 
 
       isPlaying: false,
-      isPaused: true,
-      firstPlay: false,
       playRequest: null,
+      currentTrack: null,
+      playbackMode: false,
+      requestPause: false,
+      requestResume: false,
       setIsPlaying: (value) => set({ isPlaying: value }),
-      setIsPaused: (value) => set({ isPaused: value }),
-      setFirstPlay: (value) => set({ firstPlay: value }),
-      setPlayRequest: (req) => set({ playRequest: req }),
+      setPlayRequest: (payload) => set({ playRequest: payload }),
+      setCurrentTrack: (payload) => set({ currentTrack: payload }),
       clearPlayRequest: () => set({ playRequest: null }),
-      
+      setPlaybackMode: (value) => set({ playbackMode: value }),
+      setRequestPause: () => set({ requestPause: true }),
+      setRequestResume: () => set({ requestResume: true }),
+      clearRequests: () => set({ requestPause: false, requestResume: false }),
+
+
       loggedinAdmin: "",
       loggedinAdminUuid: "",
       setLoggedinAdmin: (value) => set({ loggedinAdmin: value }),
       setLoggedinAdminUuid: (value) => set({ loggedinAdminUuid: value }),
 
+
+      isInteractionLocked: false,
+      setIsInteractionLocked: (value) => set({ isInteractionLocked: value }),
+      titleReveal: false,
+      setTitleReveal: (value) => set({ titleReveal: value }),
+      sectionReveal: false,
+      setSectionReveal: (value) => set({ sectionReveal: value }),
 }),
 {
     name: 'volume-storage',
     partialize: (state) => ({  
       volume: state.volume,
-      firstPlay: state.firstPlay,
-      currentSnippetId: state.currentSnippetId,
-      currentSongId: state.currentSongId,
-      currentArtistId: state.currentArtistId,
+      currentTrack: state.currentTrack,
+      playbackMode: state.playbackMode,
       loggedinAdmin: state.loggedinAdmin,
       loggedinAdminUuid: state.loggedinAdminUuid,
+      titleReveal: state.titleReveal,
+      sectionReveal: state.sectionReveal,
     }),
     storage: createJSONStorage(() => sessionStorage)
 }

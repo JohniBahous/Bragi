@@ -100,11 +100,11 @@
 }
 
 .button-fill-blue {
-  filter: var(--filter-blue, transparent); /* Blue #5200ff */
+  filter: var(--filter-violet, transparent); /* Violet #5200ff */
 }
 
 .button-fill-pink {
-  filter: var(--filter-pink, transparent); /* Pink #ff0099 */
+  filter: var(--filter-magenta, transparent); /* Pink #ff0099 */
 }
 
 .button-fill-black {
@@ -113,6 +113,10 @@
 
 .button-fill-white {
   filter: var(--filter-white, transparent); /* White #fcfbfc */
+}
+
+.button-fill-amber {
+  filter: var(--filter-amber, transparent); /* Amber #ff9f1c */
 }
 
 .button:hover {

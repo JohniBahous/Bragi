@@ -8,6 +8,8 @@
 
 .divider-bottom {
   width: 100%;
+  height: 100%;
+  background-color: #5200ff;
 }
 .divider-bottom-svg {
   width: 100%;

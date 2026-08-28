@@ -22,7 +22,6 @@
 .volume-slider-body::-webkit-slider-runnable-track {
   background-color: var(--volume-slider-background-color, transparent);
   border-radius: 0px;
-  border-radius: 0px;
   height: 15px;
   outline: 3px solid var(--volume-slider-color, transparent);
   cursor: pointer;

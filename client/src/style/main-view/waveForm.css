@@ -1,0 +1,50 @@
+:root {
+  --m: 15;
+  --wavefreq: calc(125ms * var(--m));
+}
+@keyframes waveform {
+  0% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+  100% {
+    transform: scaleY(0.5);
+  }
+}
+
+section {
+  display: flex;
+  gap: 5px;
+}
+
+[class*="wave"] {
+  animation: waveform var(--wavefreq) ease-in-out infinite forwards;
+  width: 0.5vw;
+  height: 3vh;
+}
+
+[class*="wave-black"] {
+  background-color: #1b1b1b;
+}
+
+[class*="wave-amber"] {
+  background-color: #ff9f1c;
+}
+
+.wave1 {
+  --wavefreq: calc(150ms * var(--m));
+}
+
+.wave2 {
+  --wavefreq: calc(200ms * var(--m));
+}
+
+.wave3 {
+  --wavefreq: calc(300ms * var(--m));
+}
+
+.wave4 {
+  --wavefreq: calc(350ms * var(--m));
+}

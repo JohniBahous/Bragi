@@ -1,0 +1,34 @@
+.pillars-slider-container {
+  position: relative;
+  width: 100px;
+  height: 400px;
+}
+
+.pillars-slider-container svg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.pillars-slider-input::-webkit-slider-runnable-track {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -150px;
+  top: 150px;
+  transform-origin: center;
+  width: 400px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.pillars-slider-input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1px;
+  height: 1px;
+}
+
+.pillars-slider-input::-moz-range-thumb {
+  appearance: none;
+  width: 1px;
+  height: 1px;
+}

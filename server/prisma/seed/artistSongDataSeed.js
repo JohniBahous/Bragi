@@ -1,6 +1,8 @@
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
+import data from "../seed-data/artistSongData.json" with { type: 'json' }
+
 const prisma = new PrismaClient();
-const data = require('../data/artistSongData.json');
+
 
 async function main() {
   await prisma.$executeRaw `TRUNCATE TABLE song RESTART IDENTITY CASCADE`;

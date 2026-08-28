@@ -1,0 +1,40 @@
+.e404-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.e404-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-auto-rows: 120px;
+  width: 100vw;
+  height: 100vh;
+  background: #1b1b1b;
+  color: #fcfbfc;
+}
+
+.e404-page-grid-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+
+.e404-page-grid-special-cell {
+  font-weight: bold;
+}
+
+.e404-page-grid-special-cell-404 {
+  color: #c2fe0c;
+  font-size: x-large;
+}
+
+.e404-page-grid-special-cell-dust {
+  color: #c2fe0c;
+  font-size: large;
+}
+
+.e404-page-grid-cell:hover {
+  font-size: xx-large;
+}

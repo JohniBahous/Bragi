@@ -15,7 +15,7 @@ export default (env, argv) => {
     output: {
       path: path.resolve(__dirname, "dist"),
       publicPath: "/",
-      filename: "bundle.js",
+      filename: "[name].[contenthash].js",
       clean: true,
     },
     module: {
@@ -34,7 +34,7 @@ export default (env, argv) => {
       type: 'asset/resource',
     },
     {
-      test: /\.(png|jpe?g|gif|webp)$/i,
+      test:  /\.(png|jpe?g|gif|webp|mp3|wav|ogg)$/i,
       type: 'asset/resource',
     },
       ],
@@ -56,5 +56,11 @@ export default (env, argv) => {
       historyApiFallback: true,
     },
     devtool: isProd ? false : "inline-source-map", 
+    optimization: {
+  runtimeChunk: "single",
+  splitChunks: {
+    chunks: "all",
+  },
+}
   };
 };

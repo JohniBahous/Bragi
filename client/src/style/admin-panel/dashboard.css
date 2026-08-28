@@ -17,8 +17,11 @@
   min-height: 75vh;
   border-right: 2px solid #1b1b1b;
 }
+
 .dashboard-left-adminInfo {
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .dashboard-left-buttonField,
@@ -26,6 +29,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .dashboard-right {
   min-width: 50vw;
   min-height: 75vh;

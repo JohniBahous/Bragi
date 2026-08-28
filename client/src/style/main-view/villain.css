@@ -1,92 +1,126 @@
-.villain {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #ff0099;
+.villain-parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: #f5008f;
   color: #1b1b1b;
-  /* border-radius: 30% 20% 0 0; */
 }
 
-.villain-title {
+.villain-top-title {
+  grid-column: span 6 / span 6;
   display: flex;
   flex-direction: row;
+  border-bottom: 3px solid #1b1b1b;
 }
 
-.villain-title-right {
-  background-color: #1a1a1a;
-  color: #ff0099;
-  margin-top: 10px;
-  font-family: "Monobloco";
-}
-
-.villain-title-left {
-  background-color: #ff0099;
+.villain-top-title-left {
+  background-color: #f5008f;
   color: #1b1b1b;
-  font-family: "Monobloco";
+  font-family: "Warning";
+  font-size: clamp(1.5rem, 10vw, 11rem);
 }
 
-.villain-body {
+.villain-top-title-right {
+  background-color: #1b1b1b;
+  color: #f5008f;
+  font-family: "Warning";
+  font-size: clamp(1.5rem, 10vw, 11rem);
   display: flex;
-  flex-direction: row;
-}
-.villain-body-left {
-  font-size: 28px;
-  flex: 1;
-  min-width: 450px;
-  margin: 2px;
+  align-items: end;
 }
 
-.villain-body-middle {
-  display: flex;
-  background-color: #ff0099;
-  color: #1b1b1b;
-  -webkit-text-stroke: 2px #1b1b1b;
-  -webkit-text-fill-color: #ff0099;
-  max-width: 550px;
+.villain-right-title {
+  grid-row: span 3 / span 3;
+  grid-column-start: 6;
+  grid-row-start: 2;
 }
 
-.villain-body-right {
+.villain-right-title-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  max-width: 350px;
-  font-family: "Monobloco";
-}
-.villain-body-right-text {
-  margin: -5rem;
+  font-family: "Warning";
   background-color: #1b1b1b;
-  color: #ff0099;
+  color: #f5008f;
+  font-size: clamp(1.5rem, 11vw, 12rem);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 3vh;
+}
+
+.villain-paragraph {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-row-start: 2;
+  border-bottom: 3px solid #1b1b1b;
+  border-right: 3px solid #1b1b1b;
+  background-color: #1b1b1b;
+  color: #f5008f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.villain-paragraph-text {
+  font-size: clamp(1.5rem, 1.75vw, 3rem);
+  padding-left: 5px;
+  display: block;
+}
+
+.villain-paragraph-closer {
+  font-size: clamp(1.5rem, 2vw, 3rem);
   font-weight: 700;
-  font-size: clamp(2rem, 10vw, 8rem);
 }
 
-.villain-title-right,
-.villain-title-left,
-.villain-body-middle {
-  font-size: clamp(1.5rem, 8vw, 6.5rem);
+.villain-paragraph-invert {
+  background-color: #f5008f;
+  color: #1b1b1b;
+  padding: 2px;
 }
 
-.villain-eot {
+.villain-middle-deco {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 2;
+  border-bottom: 3px solid #1b1b1b;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: larger;
-  font-family: "Monobloco";
-  padding-bottom: 35px;
 }
 
-.villain-form {
+.villain-middle-deco-text {
+  background-color: #f5008f;
+  color: #1b1b1b;
+  -webkit-text-stroke: 2px #1b1b1b;
+  -webkit-text-fill-color: #f5008f;
+  font-size: clamp(1.5rem, 7vw, 5rem);
   display: flex;
-  flex-direction: column;
+  align-items: end;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.villain-left {
-  max-width: 60vw;
-  display: flex;
-  flex-direction: column;
+.villain-bottom-deco {
+  grid-column: span 5 / span 5;
+  grid-row: span 1 / span 1;
+  grid-row-start: 4;
+  background-image: url(../../assets/media/backgrounds/villainBg.svg);
+  background-position: center;
 }
 
-.villain-left-grid {
-  height: 25vh;
+.villain-bottom-lines {
+  grid-column: span 6 / span 6;
+}
+
+.villain-bottom-eot {
+  grid-column: span 6 / span 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-family: "Warning";
+  padding-bottom: 3vh;
 }

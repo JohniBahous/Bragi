@@ -76,9 +76,9 @@
   justify-content: space-around;
   min-height: 75vh;
   width: 100%;
-  background-image: url("../../assets/icons/harp.svg");
+  background-image: url("../../assets/media/icons/harp.svg");
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 80%;
   background-position: center;
 }
 

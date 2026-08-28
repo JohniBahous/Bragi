@@ -1,0 +1,10 @@
+[
+    {
+      "name": "APPLES",
+      "envPassword": "APPLES_PASSWORD"
+    },
+    {
+      "name": "BUTTERS",
+      "envPassword": "BUTTERS_PASSWORD"
+    }
+]
