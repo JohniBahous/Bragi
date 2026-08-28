@@ -7,7 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/server.js",
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed:content": "node ./prisma/seedArtistSong.js",
+    "db:seed:admins": "node ./prisma/seedAdmin.js",
+    "db:seed": "npm run db:seed:content && npm run db:seed:admins"
   },
   "keywords": [],
   "author": "",
@@ -28,8 +32,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  },
-  "prisma": {
-    "seed": "node prisma/seed/adminDataSeed.js"
   }
 }
