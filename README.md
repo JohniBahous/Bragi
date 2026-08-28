@@ -1,6 +1,8 @@
 
 ## __THE BRAGI INITIATIVE__
 
+[Live Site](https://bragint.netlify.app/)
+
 <img width="800" alt="Readme" src="https://github.com/user-attachments/assets/46a14b63-3868-4cf3-b5e0-7e0fca0e39b5" />
 
 An interactive music curation and discovery experience.
