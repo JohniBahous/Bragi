@@ -1,5 +1,7 @@
+/* global API_URL */
 export async function request(endpoint, options = {}) {
-  const res = await fetch(`http://localhost:8080${endpoint}`, {
+
+  const res = await fetch(`${API_URL}${endpoint}`, {
     headers: { 'Content-Type': 'application/json' },
     ...options,
   });

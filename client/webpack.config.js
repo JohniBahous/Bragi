@@ -1,4 +1,6 @@
 import path from "path";
+import webpack from "webpack";
+import process from "process";
 import { fileURLToPath } from "url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
@@ -53,6 +55,10 @@ export default (env, argv) => {
         template: "./index.html",
       }),
 
+  new webpack.DefinePlugin({
+    "API_URL": JSON.stringify(process.env.API_URL),
+  }),
+      
       ...(shouldAnalyze
         ? [new BundleAnalyzerPlugin({ analyzerPort: 8889 })]
         : []),
