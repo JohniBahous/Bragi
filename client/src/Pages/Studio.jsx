@@ -3,10 +3,10 @@ import "../style/misc/viewport-warning.css";
 import useAudioControls from "../hooks/useAudioControls.js";
 import useScrollRender from "../hooks/useScrollRender.js";
 import useAudioStore from "../stores/useAudioStore.js";
-import { Navigation, Pillars } from "../components/Studio/Pillars/index.js";
-import { SnippetRow } from "../components/Studio/Snippets/index.js";
-import { Footer, Villain } from "../components/Studio/Villain/index.js";
-import { Helpers } from "../components/Studio/Helpers/index.js";
+import { Navigation, Pillars } from "../Components/Studio/Pillars/index.js";
+import { SnippetRow } from "../Components/Studio/Snippets/index.js";
+import { Footer, Villain } from "../Components/Studio/Villain/index.js";
+import { Helpers } from "../Components/Studio/Helpers/index.js";
 import Poster from "../Components/Studio/Snippets/Poster.jsx";
 
 function Studio() {

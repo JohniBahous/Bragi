@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import "../style/admin-panel/admin-login.css";
 import "../style/admin-panel/form-field.css";
-import AdminFormField from "../components/AdminPanel/Login/AdminFormField.jsx";
+import AdminFormField from "../Components/AdminPanel/Login/AdminFormField.jsx";
 import { allAdminsQueryOptions } from "../queries/admins/queries.js";
 
 const AdminLogIn = () => {

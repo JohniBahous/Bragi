@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { Route } from "wouter";
-import { ProtectedRoute } from "./components/AdminPanel/ProtectedRoute.jsx";
+import { ProtectedRoute } from "./Components/AdminPanel/ProtectedRoute.jsx";
 import Studio from "./Pages/Studio.jsx";
 
 const AdminLogIn = lazy(() => import("./Pages/AdminLogIn.jsx"));
