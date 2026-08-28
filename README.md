@@ -1,66 +1,133 @@
-__PROJECT STILL IN PROGRESS__
 
 ## __THE BRAGI INITIATIVE__
-A production‑oriented full‑stack application engineered entirely from scratch to simulate real-world development conditions. Unlike typical portfolio or tutorial-based projects, TBI demonstrates system design, backend architecture, database modeling, and cloud storage integration at a professional level.
 
-The project required creating a fully custom Webpack configuration, writing all API routes, structuring a complete backend, designing the database schema, and managing secure communication with AWS S3. Almost every part of the system—frontend logic, routing, API design, authentication, environment management, and deployment—was created by hand without boilerplate.
+<img width="800" alt="Readme" src="https://github.com/user-attachments/assets/46a14b63-3868-4cf3-b5e0-7e0fca0e39b5" />
 
-# Core Responsibilities & Engineering Contributions:
+An interactive music curation and discovery experience.
 
-* Designed and built a complete system architecture: custom Webpack React SPA → Node.js/Express API → PostgreSQL → AWS S3 cloud storage.
+Art and artists over algorithms.
 
-* Developed a custom Webpack build pipeline with Babel, asset optimization, code splitting, production minification, and static asset delivery.
+# About
 
-* Implemented fully modular React components and views, including protected layouts, form flows, and user-specific pages.
+Bragi began to take shape as a curated music discovery experience. Not as a response to the way music is presented and consumed today, but simply as a space for artists
+to be heard, explored, with the focus placed on the artists and their work.
+Bragi's presention is bold and deliberate. The experience is guided and directed, while keeping the music and the people behind it at its center.
 
-* Built the backend from scratch with Express: routing, controllers, validation, error handling, middleware layers, and clean API structure.
+Listening, not consuming. Art, not noise.
 
-* Created the PostgreSQL schema, relational models, and efficient SQL queries for persistent user and file data.
+# Experience
 
-* Integrated AWS S3 securely, including signed URL handling, file type validation, and bucket object lifecycle considerations.
+Transmission-
 
-* Implemented custom authentication and authorization logic (tokens, hashing, secure sessions).
+The brains of the operation. 
+Artist and track information is brought into view while the full song plays through Bragi's central audio system.
 
-* Managed multi-service deployment on Render: static frontend hosting, Node.js backend service, and managed PostgreSQL database.
+<img width="640" alt="Transmission1" src="https://github.com/user-attachments/assets/72d389d6-083c-47a5-8947-9db32947c30f" />
 
-* Maintained a clean, professional Git workflow with documented commits and feature-based branches.
-
-# Key Features:
-
-* Production-ready React SPA with a handcrafted Webpack configuration.
-
-* Authentication flows with protected routes and secure token validation.
-
-* File upload, storage, and retrieval through AWS S3 using secure signed URLs.
-
-* Robust REST API with validation, middleware, and modular controllers.
-
-* PostgreSQL-based persistent data layer with structured relational modeling.
-
-* Responsive and scalable UI with attention to clean component design.
-
-* End-to-end deployment pipeline using GitHub → Render.
-
-## Tech Stack: React, Webpack, Node.js, Express, PostgreSQL, AWS S3, TypeScript, REST API
-
-# Screenshots:
-__Main Page -__
+<img  width="640" alt="Transmission2" src="https://github.com/user-attachments/assets/5255dd35-b1c2-4d67-8e56-2d78b20c5834" />
 
 
-<img width="2532" height="1364" alt="Screenshot 2025-11-11 005119" src="https://github.com/user-attachments/assets/aa309753-fe2f-4e1f-a243-efce7aba7545" />
+Strings-
 
-<img width="1156" height="1025" alt="Screenshot 2025-11-11 005217" src="https://github.com/user-attachments/assets/9442fcfc-ae0e-4a11-9fa5-6e785d9931ad" />
+Nine artists. Nine tracks. One shared space. 
+Songs are showcased equally in space and mystery, invinting users to roam between the columns, hear snippets, and uncover the flyers containing the artist's story and track information.
 
-<img width="1904" height="882" alt="image" src="https://github.com/user-attachments/assets/cadbd876-a25e-4ff9-9ab7-d7d991986f28" />
+<img width="640" alt="Strings1" src="https://github.com/user-attachments/assets/08ef1dd6-49fe-40f6-a423-a75c71e90fa0" />
+<img width="640" alt="Strings2" src="https://github.com/user-attachments/assets/a2336318-8ba2-47a8-9b1b-09c3560dbd5e" />
 
-__Admin Panel -__
 
-<img width="1918" height="943" alt="image" src="https://github.com/user-attachments/assets/89e5e8dd-86fe-4973-9342-c460591fc974" />
+Context-
 
-<img width="1917" height="942" alt="image" src="https://github.com/user-attachments/assets/15b8a825-1a58-4a22-9015-e8d4dfa574b2" />
+The Bragi Initative. A slight peek behind the curtains. Why Bragi came to exist and what guides its design and curation.
 
-<img width="1918" height="942" alt="image" src="https://github.com/user-attachments/assets/9e0da167-fb97-49a1-8b4f-abd5a635bd30" />
+<img width="640" alt="Villain1" src="https://github.com/user-attachments/assets/f1d53d99-40f6-4da5-a6ed-0693008d5d73" />
 
-<img width="1914" height="943" alt="image" src="https://github.com/user-attachments/assets/6782481b-1a48-4cf7-bc69-131a292ae207" />
+# Key Features
+
+Public Experience
+
+Snippet-based music discovery.
+Section-based experience.
+Distinct interactive presentation for each section.
+Curated library of select songs.
+Full-song playback and centralized audio control.
+Fully realized roster of artists.
+
+Administration
+
+Admin panel for behind the scenes control.
+Authentication and lightweight RBAC
+Supports copying, updating, replacing and archival/soft deletion for each artist/song.
+Song and snippet upload and management.
+Archival functionality for out of rotation artists and songs.
+Audit log for administrative actions.
+
+# Architecture
+
+<img width="402" height="957" alt="BRAGI" src="https://github.com/user-attachments/assets/ec7b7994-12bd-4db3-a8a3-11be2a8f2fe9" />
+
+# Tech-stack
+
+| Layer | Technologies |
+| --- | --- | 
+| **Build** | Webpack · Babel |
+| **Frontend** | React · Wouter · TanStack Query · Zustand |
+| **Audio** | Howler.js | 
+| **Backend** | Node.js · Express |
+| **Data** | PostgreSQL · Prisma |
+| **Storage** | AWS SDK · AWS S3 | 
+| **Security** | JWT · bcrypt · Helmet · express-rate-limit · express-slow-down|
+
+# Frontend
+
+Build & Application Structure-
+
+TBI is built as a React SPA. Rather than using a preconfigured application scaffold, it uses a custom Webpack and Babel configuration built with performance and bundle size in mind.
+The build pipeline handles JavaScript, CSS and application assets, while further optimizations such as code splitting and lazy loading are employed, particularly across the application's different views.
+The application is divided into two views: the public curated music experience and a protected admin panel, with Wouter used as a light weight routing solution.
+
+State & Data-
+
+Artist and song data is fetched and cached through TanStack Query, while Zustand manages global application state, such as the currently selected artist, song and playback state. 
+This allows for data sourced from the database to be separate from state shared between Bragi's individual sections and audio system.
+
+Audio-
+
+Howler.js powers a centralized audio system responsible for both snippet and full-song playback, switching cleanly between the two based on user interaction. 
+Because playback is centralized, Bragi's individual sections interact with the same audio system rather than managing independent players.
+
+Interface-
+
+Bragi's public facing view is divided into three distinct sections (Transmission, Strings and Context) each with its own visual and interactive language while 
+operating on the same underlying artist and song data.
+The interface is built primarily from custom reusable React components, CSS and extensive use of SVG assets, without relying on a component library.
+This allows each section to develop a distinct visual identity while retaining shared navigation, state and audio behavior.
+# Backend
+
+Runtime & API
+
+Bragi's backend is a Node.js and Express REST API responsible for artist and song data, admin operations, authentication and access to externally stored media. 
+Security middleware including Helmet, CORS configuration and rate limiting.
+Helmet, CORS configuration, rate limiting and request slowdowns are used to restrict and protect API access, with stricter controls applied to sensitive or resource-heavy operations such as media uploads.
+Data Layer
+
+Bragi uses PostgreSQL to persist structured application data, including artists, songs, administrators and audit records. 
+Prisma provides the data layer between the Express API and the database.
+Artist and song records maintain active and archived states as Bragi's featured roster changes, allowing retired content to remain preserved without appearing in the public experience.
+
+Admin panel
+
+The admin panel manages Bragi’s rotating artist and song roster without requiring direct database changes. Existing content can be updated, artist/song pairs replaced, 
+new media uploaded, and retired content archived rather than permanently deleted. An overview component allows administrators to keep track of the currently featured artists and songs 
+while providing additional internal information.
+
+Administrative routes are protected using JWT-based authentication with HTTP-only cookies and bcrypt password verification. 
+
+Administrative actions are recorded in an audit log accessible to authorized administrators.
+
+<img width="640" alt="Admin3" src="https://github.com/user-attachments/assets/891ffbd7-5645-474b-8d63-e1313e4cefc0" />
+<img width="640" alt="Admin1" src="https://github.com/user-attachments/assets/7836e60a-45b9-44e7-9ace-69a6748b22a6" />
+<img width="640" alt="Admin2" src="https://github.com/user-attachments/assets/8bf76d50-6ad3-47f0-930b-32e27948ab57" />
+
 
 
