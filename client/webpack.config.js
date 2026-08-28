@@ -8,16 +8,20 @@ const __dirname = path.dirname(__filename);
 
 export default (env, argv) => {
   const isProd = argv.mode === "production";
+  const shouldAnalyze = env?.analyze === true;
 
   return {
     mode: isProd ? "production" : "development",
+
     entry: "./src/main.jsx",
+
     output: {
       path: path.resolve(__dirname, "dist"),
       publicPath: "/",
       filename: "[name].[contenthash].js",
       clean: true,
     },
+
     module: {
       rules: [
         {
@@ -29,25 +33,31 @@ export default (env, argv) => {
           test: /\.css$/,
           use: ["style-loader", "css-loader"],
         },
-    {
-      test: /\.svg$/i,
-      type: 'asset/resource',
-    },
-    {
-      test:  /\.(png|jpe?g|gif|webp|mp3|wav|ogg)$/i,
-      type: 'asset/resource',
-    },
+        {
+          test: /\.svg$/i,
+          type: "asset/resource",
+        },
+        {
+          test: /\.(png|jpe?g|gif|webp|mp3|wav|ogg)$/i,
+          type: "asset/resource",
+        },
       ],
     },
+
     resolve: {
       extensions: [".js", ".jsx"],
     },
+
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
       }),
-      ...(isProd ? [new BundleAnalyzerPlugin({analyzerPort: 8889,})] : []), 
+
+      ...(shouldAnalyze
+        ? [new BundleAnalyzerPlugin({ analyzerPort: 8889 })]
+        : []),
     ],
+
     devServer: {
       static: path.join(__dirname, "dist"),
       port: 3000,
@@ -55,12 +65,14 @@ export default (env, argv) => {
       open: true,
       historyApiFallback: true,
     },
-    devtool: isProd ? false : "inline-source-map", 
+
+    devtool: isProd ? false : "inline-source-map",
+
     optimization: {
-  runtimeChunk: "single",
-  splitChunks: {
-    chunks: "all",
-  },
-}
+      runtimeChunk: "single",
+      splitChunks: {
+        chunks: "all",
+      },
+    },
   };
 };

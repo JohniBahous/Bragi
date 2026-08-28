@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "webpack-start": "webpack serve --open --mode development",
     "webpack-build": "webpack --mode production",
-    "webpack-analyze": "webpack --mode production --analyze"
+    "webpack-analyze": "webpack --mode production --env analyze=true"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
